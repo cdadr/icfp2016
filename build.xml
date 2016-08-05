@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="icfp2016" default="compile">
+
+  <property name="src" location="src"/>
+  <property name="bin" location="bin"/>
+
+  <target name="init">
+    <mkdir dir="${bin}"/>
+  </target>
+
+  <target name="clean">
+    <delete dir="${bin}"/>
+  </target>
+
+  <target name="compile" depends="init">
+    <javac srcdir="${src}" destdir="${bin}" includeAntRuntime="false" debug="true"/>
+  </target>
+
+  <target name="jar" depends="init,compile">
+  </target>
+
+</project>
+
